@@ -1,8 +1,8 @@
 .banner {   
    min-height: 630px;
-   background: url(/img/main_gb__1440.png) 50% 50%/cover no-repeat;   
+   background: url(../img/main_gb__1440.png) 50% 50%/cover no-repeat;   
    @include respond-to(mobile){
-      background: url(/img/main_bg_1440.png) 50% 50%/cover no-repeat  
+      background: url(../img/main_bg_1440.png) 50% 50%/cover no-repeat  
    }   
 } 
 
