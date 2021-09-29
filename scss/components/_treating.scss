@@ -1,0 +1,91 @@
+
+.treating {
+   background-color: $color07;
+}
+.treating_inner {
+   @extend .content_width;
+
+   padding-top: 120px;
+   padding-bottom: 120px;
+
+   @include respond-to(tablet){    
+      padding-top: 100px;
+      padding-bottom: 100px;
+   }
+   @include respond-to(mobile){
+      padding-top: 80px;
+      padding-bottom: 80px;
+   }
+}
+.treating_title {  
+   font-style: normal;
+   font-weight: 500;
+   font-size: 3.6rem;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+   color: $color01; 
+   @include respond-to(tablet){    
+      font-size: 3rem; 
+   }
+   @include respond-to(mobile){
+      font-size: 2rem;        
+   }
+}
+.treating_list {
+   display: flex;
+   flex-wrap: wrap;
+   @include respond-to(tablet){    
+      margin-top: 50px; 
+   }
+   @include respond-to(mobile){
+      margin-top: 40px;        
+   }
+}
+.treating_item {
+   width: calc(100%/3);
+   padding-top: 60px;
+   padding-right: 40px;
+
+   @include respond-to(tablet){    
+      padding-top: 50px; 
+      width: calc(100%/2);
+   }
+   @include respond-to(mobile){
+      padding-top: 40px;  
+      width: 100%; 
+      padding-right: 0;
+      text-align: justify;     
+   }
+}
+.treating_item_title {
+   padding-bottom: 15px;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 2.4rem;
+   letter-spacing: 0.01em;
+   text-transform: capitalize;
+   color: $color01;
+   @include respond-to(tablet){    
+      font-size: 2.2rem; 
+   }
+   @include respond-to(mobile){
+      font-size: 1.8rem;       
+   }
+
+}
+.treating_item_descr {
+   padding-top: 20px;
+   border-top: 2px solid $color08;
+   font-weight: normal;
+   font-size: 1.6rem;
+   letter-spacing: 0.01em;
+   text-transform: capitalize;
+   color: $color08;
+   @include respond-to(tablet){    
+      padding-top: 20px; 
+   }
+   @include respond-to(mobile){
+      padding-top: 12px; 
+      font-size: 1.4rem;       
+   }
+}

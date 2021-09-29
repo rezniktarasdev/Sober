@@ -1,0 +1,41 @@
+.footer {
+   background-color: $color06;
+}
+
+.footer_inner{
+   @extend .content_width;
+
+   padding-top: 120px;
+   padding-bottom: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    @include respond-to(tablet){
+       display: block;
+       padding-top: 100px;
+       padding-bottom: 75px;
+    }
+    @include respond-to(mobile){
+       display: block;
+       padding-top: 80px;
+       padding-bottom: 40px;
+    }
+}
+
+.footer_description {
+   width: 60%;
+   font-weight: normal;
+   font-size: 1.6rem;
+   line-height: 168.3%;
+   color: $color01;
+   @include respond-to(tablet){
+      padding-top: 30px;
+      width: 100%;
+      text-align: justify;
+   }
+   @include respond-to(mobile){
+      padding-top: 40px;
+      width: 100%;
+      text-align: justify;
+   }
+}

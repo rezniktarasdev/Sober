@@ -1,0 +1,123 @@
+.banner {   
+   min-height: 630px;
+   background: url(../../img/main_gb__1440.png) 50% 50%/cover no-repeat;   
+   @include respond-to(mobile){
+      background: url(../../img/main_bg_1440.png) 50% 50%/cover no-repeat  
+   }   
+} 
+
+.banner_inner{
+   @extend .content_width;
+
+    display: flex;
+    @include respond-to(mobile){
+       display: block;
+    }
+}
+
+.banner_content{
+   width:80%;
+   padding-top: 70px ;
+}
+
+.banner_title{   
+   font-weight: 500;
+   font-size: 7.2rem;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+   color: $color01;
+   margin-bottom: 50px;
+
+   @include respond-to(tablet){
+      font-size: 6rem;
+      margin-bottom: 80px;
+   }
+   @include respond-to(mobile){
+      font-size: 5.2rem;
+      margin-bottom: 60px;
+   }
+}
+
+.banner_description{
+   font-weight: 500;
+   font-size: 1.8rem;
+   text-transform: uppercase;
+   color: $color01;
+
+   @include respond-to(tablet){
+      font-size: 1.6rem;
+   }
+   @include respond-to(mobile){
+      font-size: 1.4rem;
+   }
+}
+
+.banner_info{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   margin-top: 50px;
+   padding: 0 40px;
+   @include respond-to(tablet){
+   
+      margin-bottom: 70px;
+   }
+}
+
+.banner_list{
+   display: flex;
+
+   @include respond-to(tablet){
+      display: block;
+      border-left: 2px solid $color03;
+      padding-left: 35px;
+   }
+
+   @include respond-to(mobile){
+      display: block;
+      border-left: 2px solid $color03;
+      padding-left: 35px;
+   }
+}
+
+.banner_item + .banner_item {
+   padding-left: 50px;
+
+   @include respond-to(tablet){
+      padding-left: 0px;   
+      padding-top: 15px;
+   }
+   @include respond-to(mobile){
+      padding-left: 0px;   
+      padding-top: 15px;
+   }
+}
+
+.banner_link{
+   display: inline-block;
+   font-weight: normal;
+   font-size: 1.3rem;
+   line-height: 158.26%;
+   text-transform: uppercase;    
+   color: #FFFFFF;
+   &:hover {
+      color: $color03;
+   }
+   @include respond-to(mobile){
+      font-size: 1.2rem;
+   }
+}
+
+.banner_phone{ 
+   margin-top: 60px;
+   @include respond-to(tablet){
+      margin-top: 90px;
+   }
+}
+
+.banner_phone_link{
+   font-size: 1.6rem;
+   padding: 10px 20px;
+   color: $color01;
+   background-color: $color03;
+}

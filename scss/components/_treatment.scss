@@ -1,0 +1,61 @@
+.treatment{
+   padding-top: 140px;
+        
+}
+
+.treatment_inners {
+   @extend .content_width;     
+}
+
+.treatment_info {  
+   padding: 50px;
+   background-color: $color03; 
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+   @include respond-to(tablet) {
+      display: block;
+      text-align: center;
+      padding: 30px;
+   }  
+
+   @include respond-to(mobile) {
+      display: block;
+      text-align: center;
+      padding: 20px;
+   }  
+}
+
+.treatment_description {
+   // padding: 0 20px;
+   font-weight: 500;
+   font-size: 2.4rem;
+   line-height: 35px;
+   text-transform: uppercase;
+   color: $color01;
+
+   @include respond-to(mobile) {
+      font-size: 1.8rem;
+   }  
+}
+.treatment_phone{
+   padding: 0 20px;
+   @include respond-to(tablet) {
+      padding-top: 40px;
+   } 
+   @include respond-to(mobile) {
+      padding-top: 40px;
+   } 
+}
+
+
+.treatment_phone_link { 
+   font-size: 1.6rem;
+   padding: 10px 20px;
+   color: $color03;
+   background-color: $color01;
+}
+
+
+

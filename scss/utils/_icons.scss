@@ -1,0 +1,85 @@
+@font-face {
+	font-family: "iconfont";
+	src: url('../fonts/iconfont.eot');
+	src: url('../fonts/iconfont.eot?#iefix') format('eot'),
+		url('../fonts/iconfont.woff2') format('woff2'),
+		url('../fonts/iconfont.woff') format('woff'),
+		url('../fonts/iconfont.ttf') format('truetype'),
+		url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "iconfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == avatar {
+		$char: "\F120";
+	}
+	@if $filename == instagram {
+		$char: "\F121";
+	}
+	@if $filename == menu-button {
+		$char: "\F122";
+	}
+	@if $filename == paypal {
+		$char: "\F123";
+	}
+	@if $filename == periscope {
+		$char: "\F124";
+	}
+	@if $filename == printer {
+		$char: "\F125";
+	}
+	@if $filename == settings {
+		$char: "\F126";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-avatar {
+	@include icon(avatar);
+}
+.icon-instagram {
+	@include icon(instagram);
+}
+.icon-menu-button {
+	@include icon(menu-button);
+}
+.icon-paypal {
+	@include icon(paypal);
+}
+.icon-periscope {
+	@include icon(periscope);
+}
+.icon-printer {
+	@include icon(printer);
+}
+.icon-settings {
+	@include icon(settings);
+}
