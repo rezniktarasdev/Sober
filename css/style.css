@@ -103,12 +103,12 @@ body {
 
 .banner {
   min-height: 630px;
-  background: url(../img/main_gb__1440.png) 50% 50%/cover no-repeat;
+  background: url(/img/main_gb__1440.png) 50% 50%/cover no-repeat;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .banner {
-    background: url(../img/main_bg_1440.png) 50% 50%/cover no-repeat;
+    background: url(/img/main_bg_1440.png) 50% 50%/cover no-repeat;
   }
 }
 
